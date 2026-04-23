@@ -26,8 +26,16 @@ export function JoinUs() {
   return (
     <div>
       {/* Page hero */}
-      <section className="bg-reto-black py-20 lg:py-28 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative bg-reto-black py-20 lg:py-28 px-6 overflow-hidden">
+        {/* Guard image background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/photos/recruit.jpg')" }}
+        />
+        <div className="absolute inset-0" style={{ background: "rgba(6,3,0,0.78)" }} />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-reto-black to-transparent pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <FadeUp>
             <p className="font-display text-xs tracking-[0.4em] text-reto-orange uppercase mb-6">
               {tx.label}
@@ -97,7 +105,7 @@ export function JoinUs() {
                 href="https://wa.me/31612345678?text=Hallo%2C%20ik%20wil%20graag%20solliciteren%20bij%20Reto%20Beveiliging"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 font-display text-xs tracking-[0.3em] text-reto-green px-10 py-4 transition-opacity duration-200 hover:opacity-90 uppercase"
+                className="inline-flex items-center gap-3 font-display text-xs tracking-[0.3em] text-reto-green px-9 py-3.5 rounded-sm transition-opacity duration-200 hover:opacity-90 uppercase"
                 style={{ backgroundColor: "#F0EBE0" }}
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">

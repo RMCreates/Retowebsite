@@ -29,7 +29,7 @@ export function RecruitTeaser() {
           </p>
           <Link
             href="/werken-bij"
-            className="inline-block font-display text-xs tracking-[0.35em] border border-reto-cream/40 text-reto-cream px-10 py-4 hover:bg-reto-cream hover:text-reto-green transition-all duration-300 uppercase"
+            className="inline-block font-display text-xs tracking-[0.35em] border border-reto-cream/40 text-reto-cream px-9 py-3.5 rounded-sm hover:bg-reto-cream hover:text-reto-green transition-all duration-300 uppercase"
           >
             {tx.link}
           </Link>

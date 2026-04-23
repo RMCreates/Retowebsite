@@ -81,7 +81,7 @@ export function Services() {
                   href={`https://wa.me/31612345678?text=Hallo%2C%20ik%20heb%20interesse%20in%20${encodeURIComponent(item.name.replace("\n", " "))}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-block font-display text-xs tracking-[0.35em] px-8 py-3.5 transition-all duration-300 uppercase ${
+                  className={`inline-block font-display text-xs tracking-[0.35em] px-8 py-3 rounded-sm transition-all duration-300 uppercase ${
                     isGreen
                       ? "border border-reto-cream/40 text-reto-cream hover:bg-reto-cream hover:text-reto-green"
                       : "border border-reto-orange/50 text-reto-orange hover:bg-reto-orange hover:text-reto-black"
