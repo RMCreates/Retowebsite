@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Services } from "@/components/Services";
-import { JoinUs } from "@/components/JoinUs";
 import { Footer } from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Reto Beveiliging | Professionele Beveiliging Groningen & Drenthe",
+  description:
+    "Reto Beveiliging levert professionele beveiliging voor evenementen, objecten en publieke ruimtes in Groningen en Drenthe.",
+};
 
 export default function Home() {
   return (
@@ -11,9 +15,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
-        <Services />
-        <JoinUs />
       </main>
       <Footer />
     </>

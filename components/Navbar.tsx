@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll } from "framer-motion";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/app/providers";
 import { t } from "@/lib/translations";
 import { WolfLogo } from "./WolfLogo";
@@ -9,6 +11,7 @@ import { WolfLogo } from "./WolfLogo";
 export function Navbar() {
   const { lang, toggle } = useLanguage();
   const tx = t[lang].nav;
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { scrollY } = useScroll();
@@ -18,11 +21,16 @@ export function Navbar() {
   }, [scrollY]);
 
   const links = [
-    { label: tx.about, href: "#about" },
-    { label: tx.services, href: "#services" },
-    { label: tx.join, href: "#join" },
-    { label: tx.contact, href: "#contact" },
+    { label: tx.about,    href: "/over-ons" },
+    { label: tx.services, href: "/diensten" },
+    { label: tx.join,     href: "/werken-bij" },
+    { label: tx.contact,  href: "/werken-bij#contact" },
   ];
+
+  const isActive = (href: string) => {
+    const base = href.split("#")[0];
+    return base === "/" ? pathname === "/" : pathname.startsWith(base);
+  };
 
   return (
     <motion.nav
@@ -35,23 +43,27 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group" aria-label="Reto Beveiliging home">
+        <Link href="/" className="flex items-center gap-3" aria-label="Reto Beveiliging home">
           <WolfLogo size={36} />
           <span className="font-display text-xl lg:text-2xl tracking-widest text-reto-off-white leading-none">
             RETO<span className="text-reto-orange"> BEVEILIGING</span>
           </span>
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className="font-body text-sm tracking-widest uppercase text-reto-muted hover:text-reto-orange transition-colors duration-200"
+              className={`font-body text-sm tracking-widest uppercase transition-colors duration-200 ${
+                isActive(link.href)
+                  ? "text-reto-orange border-b border-reto-orange pb-0.5"
+                  : "text-reto-muted hover:text-reto-orange"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
 
           {/* Language toggle */}
@@ -88,14 +100,16 @@ export function Navbar() {
       {menuOpen && (
         <div className="md:hidden bg-reto-black/98 border-t border-reto-orange/20 px-6 py-6 flex flex-col gap-5">
           {links.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className="font-display text-2xl tracking-widest text-reto-off-white hover:text-reto-orange transition-colors"
+              className={`font-display text-2xl tracking-widest transition-colors ${
+                isActive(link.href) ? "text-reto-orange" : "text-reto-off-white hover:text-reto-orange"
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}

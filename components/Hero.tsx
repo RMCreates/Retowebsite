@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useLanguage } from "@/app/providers";
 import { t } from "@/lib/translations";
 import { WolfLogo } from "./WolfLogo";
@@ -98,20 +99,20 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 pb-20"
         >
-          <a
-            href="#services"
-            className="group relative font-display text-base lg:text-lg tracking-[0.2em] bg-reto-orange text-reto-black px-10 py-4 hover:bg-reto-orange-light transition-colors duration-200 w-full sm:w-auto text-center"
+          <Link
+            href="/diensten"
+            className="font-display text-base lg:text-lg tracking-[0.2em] bg-reto-orange text-reto-black px-10 py-4 hover:bg-reto-orange-light transition-colors duration-200 w-full sm:w-auto text-center"
           >
             {tx.cta1}
-          </a>
-          <a
-            href="#join"
+          </Link>
+          <Link
+            href="/werken-bij"
             className="font-display text-base lg:text-lg tracking-[0.2em] border border-reto-orange/60 text-reto-off-white px-10 py-4 hover:border-reto-orange hover:text-reto-orange transition-colors duration-200 w-full sm:w-auto text-center"
           >
             {tx.cta2}
-          </a>
+          </Link>
         </motion.div>
       </div>
 
