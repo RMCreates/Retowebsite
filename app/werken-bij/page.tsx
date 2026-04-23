@@ -4,9 +4,9 @@ import { JoinUs } from "@/components/JoinUs";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Werken Bij | Reto Beveiliging",
+  title: "Vacatures Beveiliger Groningen | Werken Bij Reto Beveiliging",
   description:
-    "Op zoek naar een uitdagende job in de beveiligingsbranche? Kom ons team versterken bij Reto Beveiliging in Groningen en Drenthe.",
+    "Werken als beveiliger in Groningen of Drenthe? Reto Beveiliging groeit en zoekt nieuwe teamleden. Solliciteer direct via WhatsApp.",
 };
 
 export default function JoinPage() {

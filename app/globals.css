@@ -9,9 +9,14 @@
   --color-reto-orange-dark: #8B4010;
   --color-reto-off-white: #F5F0E8;
   --color-reto-muted: #6B6B6B;
+  --color-reto-green: #143828;
+  --color-reto-green-light: #1C4A34;
+  --color-reto-cream: #F0EBE0;
+  --color-reto-rule: #2A2A2A;
 
   --font-display: var(--font-bebas);
   --font-body: var(--font-dm-sans);
+  --font-serif: var(--font-cormorant);
 }
 
 :root {

@@ -4,9 +4,9 @@ import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Over Ons | Reto Beveiliging",
+  title: "Over Ons | Reto Beveiliging Groningen",
   description:
-    "Leer meer over Reto Beveiliging — een groeiend beveiligingsbedrijf gevestigd in Groningen en Drenthe. Betrouwbaar, sterk en professioneel.",
+    "Leer meer over Reto Beveiliging — een groeiend beveiligingsbedrijf actief in Groningen en Drenthe. Professioneel, betrouwbaar en persoonlijk.",
 };
 
 export default function AboutPage() {

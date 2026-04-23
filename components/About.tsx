@@ -4,28 +4,13 @@ import { motion } from "framer-motion";
 import { useLanguage } from "@/app/providers";
 import { t } from "@/lib/translations";
 
-function FadeIn({
-  children,
-  delay = 0,
-  direction = "up",
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  direction?: "up" | "left" | "right";
-}) {
-  const initial =
-    direction === "up"
-      ? { opacity: 0, y: 50 }
-      : direction === "left"
-        ? { opacity: 0, x: -60 }
-        : { opacity: 0, x: 60 };
-
+function FadeUp({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   return (
     <motion.div
-      initial={initial}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.85, delay, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>
@@ -35,106 +20,74 @@ function FadeIn({
 export function About() {
   const { lang } = useLanguage();
   const tx = t[lang].about;
+  const brandStatement = t[lang].brandStatement;
 
   return (
-    <section id="about" className="section-padding bg-reto-dark relative overflow-hidden">
-      {/* Background accent */}
-      <div
-        className="absolute top-0 right-0 w-1/2 h-full pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 80% at 100% 50%, rgba(200,104,26,0.04) 0%, transparent 70%)",
-        }}
-      />
+    <div>
+      {/* Page hero */}
+      <section className="relative bg-reto-black py-20 lg:py-28 px-6 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/photos/about.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-reto-black/80" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-reto-black to-transparent pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: visual panel */}
-          <FadeIn direction="left">
-            <div className="relative aspect-[4/5] bg-reto-gray border border-reto-orange/20 overflow-hidden">
-              {/* Security jacket visual — CSS-based placeholder */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  {/* Large SECURITY text like on the jackets */}
-                  <p
-                    className="font-display text-[10vw] lg:text-7xl tracking-[0.3em] text-reto-off-white/10 select-none"
-                    aria-hidden
-                  >
-                    SECURITY
-                  </p>
-                  <p
-                    className="font-display text-[10vw] lg:text-7xl tracking-[0.3em] text-reto-off-white/10 select-none"
-                    aria-hidden
-                  >
-                    SECURITY
-                  </p>
-                  <p
-                    className="font-display text-[10vw] lg:text-7xl tracking-[0.3em] text-reto-off-white/10 select-none"
-                    aria-hidden
-                  >
-                    SECURITY
-                  </p>
-                </div>
-              </div>
-
-              {/* Orange corner accent */}
-              <div className="absolute top-0 left-0 w-1 h-20 bg-reto-orange" />
-              <div className="absolute top-0 left-0 w-20 h-1 bg-reto-orange" />
-              <div className="absolute bottom-0 right-0 w-1 h-20 bg-reto-orange" />
-              <div className="absolute bottom-0 right-0 w-20 h-1 bg-reto-orange" />
-
-              {/* Replace with client photo note (hidden in UI) */}
-              {/* <img src="/photos/about.jpg" alt="Reto Beveiliging team" className="w-full h-full object-cover" /> */}
-            </div>
-          </FadeIn>
-
-          {/* Right: text */}
-          <div className="flex flex-col gap-8">
-            {/* Section label */}
-            <FadeIn delay={0.1}>
-              <div className="flex items-center gap-4">
-                <div className="h-px w-8 bg-reto-orange" />
-                <span className="font-body text-xs tracking-[0.3em] uppercase text-reto-orange">
-                  {tx.label}
-                </span>
-              </div>
-            </FadeIn>
-
-            {/* Title */}
-            <FadeIn delay={0.2}>
-              <h2 className="font-display text-5xl lg:text-6xl xl:text-7xl leading-tight text-reto-off-white whitespace-pre-line">
-                {tx.title}
-              </h2>
-            </FadeIn>
-
-            {/* Body */}
-            <FadeIn delay={0.3}>
-              <p className="font-body text-base lg:text-lg leading-relaxed text-reto-muted max-w-lg">
-                {tx.body}
-              </p>
-            </FadeIn>
-
-            {/* Stats */}
-            <FadeIn delay={0.4}>
-              <div className="grid grid-cols-3 gap-0 border border-reto-orange/20 mt-4">
-                {tx.stats.map((stat, i) => (
-                  <div
-                    key={i}
-                    className={`p-5 lg:p-6 text-center ${i < tx.stats.length - 1 ? "border-r border-reto-orange/20" : ""}`}
-                  >
-                    <p className="font-display text-3xl lg:text-4xl text-reto-orange tracking-wider">
-                      {stat.value}
-                    </p>
-                    <p className="font-body text-xs text-reto-muted tracking-widest uppercase mt-1">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <FadeUp>
+            <p className="font-display text-xs tracking-[0.4em] text-reto-orange uppercase mb-6">
+              {tx.label}
+            </p>
+          </FadeUp>
+          <div className="overflow-hidden">
+            <FadeUp delay={0.1}>
+              <h1 className="font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-reto-cream font-normal italic leading-none">
+                {tx.storyTitle}
+              </h1>
+            </FadeUp>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Story section */}
+      <section className="bg-reto-black py-20 lg:py-28 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          <FadeUp>
+            <div className="h-px w-8 bg-reto-orange mb-10" />
+            <p className="font-body text-base lg:text-lg text-reto-muted leading-relaxed">
+              {tx.body}
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <div className="bg-reto-green p-10 lg:p-14">
+              <p className="font-serif text-2xl lg:text-3xl text-reto-cream font-normal italic leading-relaxed">
+                &ldquo;{brandStatement.quote}&rdquo;
+              </p>
+            </div>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Operating area */}
+      <section className="bg-reto-dark py-20 lg:py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <FadeUp>
+            <p className="font-display text-xs tracking-[0.4em] text-reto-orange/70 uppercase mb-6">
+              {tx.areaLabel}
+            </p>
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-reto-cream font-normal italic leading-tight mb-10 max-w-2xl">
+              {tx.areaTitle}
+            </h2>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <p className="font-body text-base text-reto-muted leading-relaxed max-w-2xl">
+              {tx.areaBody}
+            </p>
+          </FadeUp>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -4,9 +4,9 @@ import { Services } from "@/components/Services";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Diensten | Reto Beveiliging",
+  title: "Beveiliging Diensten | Evenementen & Object Beveiliging Groningen",
   description:
-    "Reto Beveiliging biedt evenementenbeveiliging, objectbeveiliging, gastheer/gastvrouw diensten en crowd management in Groningen en Drenthe.",
+    "Evenementenbeveiliging, objectbeveiliging, gastheer/gastvrouw en crowd management in Groningen en Drenthe. Vraag een offerte aan via WhatsApp.",
 };
 
 export default function ServicesPage() {
