@@ -1,18 +1,28 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-reto-black: #0A0A0A;
-  --color-reto-dark: #111111;
-  --color-reto-gray: #1C1C1C;
-  --color-reto-orange: #C8681A;
-  --color-reto-orange-light: #E07820;
+  /* Surfaces */
+  --color-reto-black: #0A0A0A;      /* void — primary bg */
+  --color-reto-void: #0A0A0A;       /* alias for semantic clarity */
+  --color-reto-shadow: #131313;     /* section alternation (replaces green) */
+  --color-reto-dark: #131313;       /* legacy alias, points to shadow */
+  --color-reto-gray: #1C1C1C;       /* card/panel bg */
+  --color-reto-iron: #1C1C1C;       /* alias */
+  --color-reto-rule: #222222;       /* borders, hairlines */
+
+  /* Accent — amber, logo-derived */
+  --color-reto-amber: #C07018;      /* primary accent */
+  --color-reto-amber-hot: #D4801E;  /* hover / button fill */
+  --color-reto-orange: #C07018;     /* legacy alias → amber (to be removed after migration) */
+  --color-reto-orange-light: #D4801E;
   --color-reto-orange-dark: #8B4010;
-  --color-reto-off-white: #F5F0E8;
-  --color-reto-muted: #6B6B6B;
-  --color-reto-green: #143828;
-  --color-reto-green-light: #1C4A34;
-  --color-reto-cream: #F0EBE0;
-  --color-reto-rule: #2A2A2A;
+
+  /* Text */
+  --color-reto-bone: #F0EBE0;       /* primary on dark */
+  --color-reto-cream: #F0EBE0;      /* alias */
+  --color-reto-off-white: #F5F0E8;  /* legacy */
+  --color-reto-ash: #707070;        /* secondary text */
+  --color-reto-muted: #707070;      /* alias */
 
   --font-display: var(--font-bebas);
   --font-body: var(--font-dm-sans);

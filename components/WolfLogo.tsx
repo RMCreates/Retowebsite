@@ -4,7 +4,7 @@ export function WolfLogo({ size = 48, className = "" }: { size?: number; classNa
   return (
     <Image
       src="/logo.png"
-      alt="Reto Beveiliging"
+      alt="RETO Beveiliging"
       width={size}
       height={size}
       className={className}

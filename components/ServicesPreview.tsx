@@ -38,10 +38,10 @@ export function ServicesPreview() {
               transition={{ duration: 0.7, delay: i * 0.08 }}
               className="border-b border-r border-reto-rule p-8 lg:p-12 group hover:bg-reto-rule/40 transition-colors duration-300"
             >
-              <p className="font-display text-5xl lg:text-6xl text-reto-orange/25 group-hover:text-reto-orange/50 transition-colors duration-300 mb-5 leading-none">
+              <p className="font-display text-5xl lg:text-6xl text-reto-amber/25 group-hover:text-reto-amber/60 transition-colors duration-300 mb-5 leading-none">
                 {item.number}
               </p>
-              <h3 className="font-serif text-2xl lg:text-3xl text-reto-cream font-normal leading-snug mb-4 whitespace-pre-line">
+              <h3 className="font-display text-3xl lg:text-4xl text-reto-cream tracking-[0.02em] leading-tight mb-4 whitespace-pre-line uppercase">
                 {item.name}
               </h3>
               <p className="font-body text-sm text-reto-muted leading-relaxed">

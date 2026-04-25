@@ -15,22 +15,23 @@ export function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-reto-black"
     >
-      {/* Guard photo */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/photos/team.jpg')" }}
-      />
-      {/* Warm dark overlay — preserves the orange/amber tones of the photo */}
-      <div className="absolute inset-0" style={{ background: "rgba(6,3,0,0.68)" }} />
-      {/* Warm orange ambient glow from left (matches the photo light) */}
+      {/* Warm amber ambient glow from left — the one color moment on an otherwise void hero */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 70% 60% at 25% 50%, rgba(160,65,8,0.18) 0%, transparent 65%)",
+            "radial-gradient(ellipse 70% 60% at 22% 50%, rgba(192,112,24,0.18) 0%, transparent 65%)",
         }}
       />
-      {/* Bottom fade */}
+      {/* Secondary ambient from right for depth */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 80% 60%, rgba(192,112,24,0.08) 0%, transparent 70%)",
+        }}
+      />
+      {/* Bottom fade to next section */}
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-reto-black to-transparent pointer-events-none" />
 
       {/* Content */}
@@ -61,13 +62,13 @@ export function Hero() {
           {tx.locationLabel}
         </motion.p>
 
-        {/* RETO — serif semibold italic for more weight */}
+        {/* RETO — Bebas Neue display, uppercase authority */}
         <div className="overflow-hidden">
           <motion.h1
             initial={{ opacity: 0, y: 70 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif font-semibold italic text-[22vw] sm:text-[16vw] lg:text-[13vw] leading-none text-reto-cream"
+            className="font-display text-[24vw] sm:text-[18vw] lg:text-[14vw] leading-[0.85] tracking-[0.02em] text-reto-cream"
           >
             {tx.line1}
           </motion.h1>
@@ -79,7 +80,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[7vw] sm:text-[5.5vw] lg:text-[4.5vw] leading-none tracking-[0.35em] text-reto-orange"
+            className="font-display text-[7vw] sm:text-[5.5vw] lg:text-[4.5vw] leading-none tracking-[0.35em] text-reto-amber"
           >
             {tx.line2}
           </motion.p>
@@ -90,7 +91,7 @@ export function Hero() {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.9, delay: 0.95 }}
-          className="w-14 h-px bg-reto-orange origin-center mt-8 mb-7"
+          className="w-14 h-px bg-reto-amber origin-center mt-8 mb-7"
         />
 
         {/* Tagline */}
@@ -114,7 +115,7 @@ export function Hero() {
             href="https://wa.me/31612345678?text=Hallo%2C%20ik%20heb%20een%20vraag%20over%20uw%20diensten"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 font-display text-sm tracking-[0.2em] px-9 py-3.5 rounded-sm text-white w-full sm:w-auto justify-center transition-opacity duration-200 hover:opacity-90"
+            className="inline-flex items-center gap-3 font-display text-sm tracking-[0.2em] px-9 py-3.5 rounded-none text-white w-full sm:w-auto justify-center transition-opacity duration-200 hover:opacity-90"
             style={{ backgroundColor: "#25D366" }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -124,7 +125,7 @@ export function Hero() {
           </a>
           <Link
             href="/diensten"
-            className="font-display text-sm tracking-[0.3em] text-reto-cream/70 hover:text-reto-orange transition-colors duration-200 uppercase"
+            className="font-display text-sm tracking-[0.3em] text-reto-cream/70 hover:text-reto-amber transition-colors duration-200 uppercase"
           >
             {tx.cta1} →
           </Link>
@@ -142,7 +143,7 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-8 bg-gradient-to-b from-reto-orange/50 to-transparent"
+          className="w-px h-8 bg-gradient-to-b from-reto-amber/50 to-transparent"
         />
       </motion.div>
     </section>

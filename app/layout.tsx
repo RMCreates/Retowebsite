@@ -26,9 +26,9 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Reto Beveiliging | Professionele Beveiliging Groningen & Drenthe",
+  title: "RETO Beveiliging | Professionele Beveiliging Groningen & Drenthe",
   description:
-    "Reto Beveiliging levert professionele beveiliging voor evenementen, objecten en publieke ruimtes in Groningen en Drenthe.",
+    "RETO Beveiliging levert professionele beveiliging voor evenementen, objecten en publieke ruimtes in Groningen en Drenthe.",
   keywords: ["beveiliging", "Groningen", "Drenthe", "security", "evenementenbeveiliging", "objectbeveiliging"],
 };
 

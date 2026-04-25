@@ -43,10 +43,10 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3" aria-label="Reto Beveiliging home">
+        <Link href="/" className="flex items-center gap-3" aria-label="RETO Beveiliging home">
           <WolfLogo size={36} />
           <span className="font-display text-xl lg:text-2xl tracking-widest text-reto-off-white leading-none">
-            RETO<span className="text-reto-orange"> BEVEILIGING</span>
+            RETO<span className="text-reto-amber"> BEVEILIGING</span>
           </span>
         </Link>
 

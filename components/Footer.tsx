@@ -56,16 +56,16 @@ export function Footer() {
   ];
 
   return (
-    <footer id="contact" className="bg-reto-dark border-t border-reto-rule">
+    <footer id="contact" className="bg-reto-shadow border-t border-reto-rule">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand */}
           <div className="flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-3" aria-label="Reto Beveiliging">
+            <Link href="/" className="flex items-center gap-3" aria-label="RETO Beveiliging">
               <WolfLogo size={40} />
               <div className="flex flex-col leading-tight">
-                <span className="font-serif italic text-lg text-reto-cream">Reto</span>
-                <span className="font-display text-sm tracking-widest text-reto-orange">BEVEILIGING</span>
+                <span className="font-display text-xl tracking-widest text-reto-cream">RETO</span>
+                <span className="font-display text-sm tracking-widest text-reto-amber">BEVEILIGING</span>
               </div>
             </Link>
             <p className="font-body text-sm text-reto-muted leading-relaxed whitespace-pre-line max-w-xs">

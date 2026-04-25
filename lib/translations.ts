@@ -7,7 +7,7 @@ export const t = {
       contact: "Contact",
     },
     hero: {
-      line1: "Reto",
+      line1: "RETO",
       line2: "BEVEILIGING",
       locationLabel: "GRONINGEN — DRENTHE",
       tagline: "Professionele beveiliging, persoonlijke aanpak.",
@@ -21,22 +21,22 @@ export const t = {
     aboutTeaser: {
       label: "Over Ons",
       headline: "Wie wij zijn.",
-      body: "Reto Beveiliging is een groeiend beveiligingsbedrijf actief in Groningen en Drenthe. Van evenementen tot objectbeveiliging — wij leveren wat wij beloven.",
+      body: "RETO Beveiliging is een groeiend beveiligingsbedrijf actief in Groningen en Drenthe. Van evenementen tot objectbeveiliging — wij leveren wat wij beloven.",
       link: "Lees ons verhaal",
     },
     recruitTeaser: {
       label: "Werken Bij",
       headline: "Word onderdeel van het team.",
-      body: "Reto Beveiliging groeit — en dat betekent dat wij mensen zoeken die mee willen groeien. Ben jij de volgende?",
+      body: "RETO Beveiliging groeit — en dat betekent dat wij mensen zoeken die mee willen groeien. Ben jij de volgende?",
       link: "Bekijk vacatures",
     },
     about: {
       label: "Over Ons",
       storyTitle: "Ons verhaal.",
-      body: "Reto Beveiliging is een groeiend beveiligingsbedrijf gevestigd in Groningen en Drenthe. Wij leveren professionele beveiliging voor evenementen, objecten en publieke ruimtes. Ons team staat voor kwaliteit, betrouwbaarheid en een professionele uitstraling — elke opdracht, elke dag.",
+      body: "RETO Beveiliging is een groeiend beveiligingsbedrijf gevestigd in Groningen en Drenthe. Wij leveren professionele beveiliging voor evenementen, objecten en publieke ruimtes. Ons team staat voor kwaliteit, betrouwbaarheid en een professionele uitstraling — elke opdracht, elke dag.",
       areaLabel: "Werkgebied",
       areaTitle: "Actief in Groningen & Drenthe.",
-      areaBody: "Reto Beveiliging is actief in de provincies Groningen en Drenthe. Of het nu gaat om een groot evenement in de stad Groningen, objectbewaking in Drenthe, of crowd management bij publieke evenementen — wij zijn er. Ons netwerk van beveiligingsprofessionals staat klaar om in te springen waar en wanneer nodig.",
+      areaBody: "RETO Beveiliging is actief in de provincies Groningen en Drenthe. Of het nu gaat om een groot evenement in de stad Groningen, objectbewaking in Drenthe, of crowd management bij publieke evenementen — wij zijn er. Ons netwerk van beveiligingsprofessionals staat klaar om in te springen waar en wanneer nodig.",
     },
     services: {
       label: "Diensten",
@@ -100,7 +100,7 @@ export const t = {
       locationLabel: "Locatie",
       location: "Groningen & Drenthe, Nederland",
       followLabel: "Volg ons",
-      copyright: "© 2025 Reto Beveiliging. Alle rechten voorbehouden.",
+      copyright: "© 2025 RETO Beveiliging. Alle rechten voorbehouden.",
     },
   },
   en: {
@@ -111,7 +111,7 @@ export const t = {
       contact: "Contact",
     },
     hero: {
-      line1: "Reto",
+      line1: "RETO",
       line2: "BEVEILIGING",
       locationLabel: "GRONINGEN — DRENTHE",
       tagline: "Professional security, personal approach.",
@@ -125,22 +125,22 @@ export const t = {
     aboutTeaser: {
       label: "About",
       headline: "Who we are.",
-      body: "Reto Beveiliging is a growing security company operating in Groningen and Drenthe. From events to object security — we deliver what we promise.",
+      body: "RETO Beveiliging is a growing security company operating in Groningen and Drenthe. From events to object security — we deliver what we promise.",
       link: "Read our story",
     },
     recruitTeaser: {
       label: "Join Us",
       headline: "Become part of the team.",
-      body: "Reto Beveiliging is growing — and that means we are looking for people who want to grow with us. Are you next?",
+      body: "RETO Beveiliging is growing — and that means we are looking for people who want to grow with us. Are you next?",
       link: "View openings",
     },
     about: {
       label: "About Us",
       storyTitle: "Our story.",
-      body: "Reto Beveiliging is a growing security company based in Groningen and Drenthe. We provide professional security for events, objects, and public spaces. Our team stands for quality, reliability, and a professional appearance — every assignment, every day.",
+      body: "RETO Beveiliging is a growing security company based in Groningen and Drenthe. We provide professional security for events, objects, and public spaces. Our team stands for quality, reliability, and a professional appearance — every assignment, every day.",
       areaLabel: "Service Area",
       areaTitle: "Active in Groningen & Drenthe.",
-      areaBody: "Reto Beveiliging operates in the provinces of Groningen and Drenthe. Whether it's a large event in the city of Groningen, object security in Drenthe, or crowd management at public events — we are there. Our network of security professionals is ready to step in wherever and whenever needed.",
+      areaBody: "RETO Beveiliging operates in the provinces of Groningen and Drenthe. Whether it's a large event in the city of Groningen, object security in Drenthe, or crowd management at public events — we are there. Our network of security professionals is ready to step in wherever and whenever needed.",
     },
     services: {
       label: "Services",
@@ -204,7 +204,7 @@ export const t = {
       locationLabel: "Location",
       location: "Groningen & Drenthe, Netherlands",
       followLabel: "Follow us",
-      copyright: "© 2025 Reto Beveiliging. All rights reserved.",
+      copyright: "© 2025 RETO Beveiliging. All rights reserved.",
     },
   },
 };

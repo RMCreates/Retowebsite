@@ -19,13 +19,16 @@ export function AboutTeaser() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-reto-gray"
+            className="relative min-h-[320px] lg:min-h-0 overflow-hidden bg-reto-shadow"
           >
             <div
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: "url('/photos/about.jpg')" }}
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 30% 50%, rgba(192,112,24,0.18) 0%, transparent 60%)",
+              }}
             />
-            <div className="absolute inset-0 bg-reto-black/40" />
+            <div className="absolute inset-0 bg-reto-black/30" />
             {/* Placeholder watermark */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
               <p className="font-display text-[16vw] lg:text-[9vw] text-reto-off-white/[0.04] tracking-[0.3em]">
@@ -42,11 +45,11 @@ export function AboutTeaser() {
             transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="flex flex-col justify-center py-16 px-0 lg:px-16"
           >
-            <div className="h-px w-8 bg-reto-orange mb-8" />
-            <p className="font-display text-xs tracking-[0.4em] text-reto-orange/70 uppercase mb-5">
+            <div className="h-px w-8 bg-reto-amber mb-8" />
+            <p className="font-display text-xs tracking-[0.4em] text-reto-amber uppercase mb-5">
               {tx.label}
             </p>
-            <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl text-reto-cream font-normal italic leading-tight mb-6">
+            <h2 className="font-display text-5xl lg:text-6xl xl:text-7xl text-reto-cream tracking-[0.02em] leading-[0.95] mb-6 uppercase">
               {tx.headline}
             </h2>
             <p className="font-body text-base text-reto-muted leading-relaxed mb-10 max-w-sm">
@@ -54,7 +57,7 @@ export function AboutTeaser() {
             </p>
             <Link
               href="/over-ons"
-              className="font-display text-xs tracking-[0.35em] text-reto-orange/60 hover:text-reto-orange transition-colors duration-200 uppercase"
+              className="font-display text-xs tracking-[0.35em] text-reto-amber/70 hover:text-reto-amber transition-colors duration-200 uppercase"
             >
               {tx.link} →
             </Link>

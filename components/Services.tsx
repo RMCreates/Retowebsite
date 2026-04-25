@@ -27,7 +27,7 @@ export function Services() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="font-serif text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-reto-cream font-normal italic leading-none"
+              className="font-display text-7xl sm:text-8xl lg:text-9xl xl:text-[10rem] text-reto-cream tracking-[0.01em] leading-[0.9] uppercase"
             >
               {tx.pageTitle}
             </motion.h1>
@@ -35,9 +35,9 @@ export function Services() {
         </div>
       </section>
 
-      {/* Service panels — alternating black / green */}
+      {/* Service panels — alternating void / shadow */}
       {tx.items.map((item, i) => {
-        const isGreen = i % 2 !== 0;
+        const isShadow = i % 2 !== 0;
         return (
           <motion.section
             key={i}
@@ -45,47 +45,29 @@ export function Services() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7 }}
-            className={`px-6 py-20 lg:py-28 border-t ${
-              isGreen
-                ? "bg-reto-green border-reto-green-light"
-                : "bg-reto-black border-reto-rule"
+            className={`px-6 py-20 lg:py-28 border-t border-reto-rule ${
+              isShadow ? "bg-reto-shadow" : "bg-reto-black"
             }`}
           >
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[160px_1fr] gap-10 lg:gap-20 items-start">
               {/* Number */}
-              <p
-                className={`font-display text-8xl lg:text-[9rem] leading-none ${
-                  isGreen ? "text-reto-cream/15" : "text-reto-orange/20"
-                }`}
-              >
+              <p className="font-display text-8xl lg:text-[9rem] leading-none text-reto-amber/25">
                 {item.number}
               </p>
 
               {/* Content */}
               <div>
-                <h2
-                  className={`font-serif text-4xl lg:text-5xl xl:text-6xl font-normal italic leading-tight mb-8 whitespace-pre-line ${
-                    isGreen ? "text-reto-cream" : "text-reto-cream"
-                  }`}
-                >
+                <h2 className="font-display text-5xl lg:text-6xl xl:text-7xl text-reto-cream tracking-[0.01em] leading-[0.95] mb-8 whitespace-pre-line uppercase">
                   {item.name}
                 </h2>
-                <p
-                  className={`font-body text-base leading-relaxed mb-10 max-w-xl ${
-                    isGreen ? "text-reto-cream/65" : "text-reto-muted"
-                  }`}
-                >
+                <p className="font-body text-base leading-relaxed mb-10 max-w-xl text-reto-muted">
                   {item.desc}
                 </p>
                 <a
                   href={`https://wa.me/31612345678?text=Hallo%2C%20ik%20heb%20interesse%20in%20${encodeURIComponent(item.name.replace("\n", " "))}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`inline-block font-display text-xs tracking-[0.35em] px-8 py-3 rounded-sm transition-all duration-300 uppercase ${
-                    isGreen
-                      ? "border border-reto-cream/40 text-reto-cream hover:bg-reto-cream hover:text-reto-green"
-                      : "border border-reto-orange/50 text-reto-orange hover:bg-reto-orange hover:text-reto-black"
-                  }`}
+                  className="inline-block font-display text-xs tracking-[0.35em] px-8 py-3 rounded-none transition-all duration-300 uppercase border border-reto-amber text-reto-amber hover:bg-reto-amber hover:text-reto-black"
                 >
                   {ctaLabel}
                 </a>

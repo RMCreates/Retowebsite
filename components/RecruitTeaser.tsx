@@ -10,7 +10,7 @@ export function RecruitTeaser() {
   const tx = t[lang].recruitTeaser;
 
   return (
-    <section className="bg-reto-green py-24 lg:py-32 px-6">
+    <section className="bg-reto-shadow py-24 lg:py-32 px-6 border-t border-reto-rule">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -18,10 +18,10 @@ export function RecruitTeaser() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="font-display text-xs tracking-[0.4em] text-reto-cream/50 uppercase mb-6">
+          <p className="font-display text-xs tracking-[0.4em] text-reto-amber uppercase mb-6">
             {tx.label}
           </p>
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-reto-cream font-normal italic leading-tight mb-8 max-w-3xl">
+          <h2 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-reto-cream tracking-[0.02em] leading-[0.9] mb-8 max-w-3xl uppercase">
             {tx.headline}
           </h2>
           <p className="font-body text-base text-reto-cream/65 leading-relaxed mb-12 max-w-lg">
@@ -29,7 +29,7 @@ export function RecruitTeaser() {
           </p>
           <Link
             href="/werken-bij"
-            className="inline-block font-display text-xs tracking-[0.35em] border border-reto-cream/40 text-reto-cream px-9 py-3.5 rounded-sm hover:bg-reto-cream hover:text-reto-green transition-all duration-300 uppercase"
+            className="inline-block font-display text-xs tracking-[0.35em] border border-reto-amber text-reto-amber px-9 py-3.5 rounded-none hover:bg-reto-amber hover:text-reto-black transition-all duration-300 uppercase"
           >
             {tx.link}
           </Link>
